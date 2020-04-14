@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+.contacts {
+  padding: 10px 0 50px 0;
+  background-color: #181818;
+}
+
+.contacts-info {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.contacts-title-text {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.contants-title-adress {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #fff;
+  width: 360px;
+}
+
+.contacts-connect {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-logo {
+  margin-right: 15px;
+  width: 8%;
+  background-color: #fff;
+}
+
+.contacts-link {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.contacts-certificates-wrapper {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.certificate-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-title {
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.certificate-pic {
+  width: 55%;
+  cursor: pointer;
+}
+
+.certificate-to-align {
+  margin-bottom: 33px;
+}
+
+/* OMG */
+/* .popup-image {
+  width: 48%;
+} */
+
+/* .image-description {
+  text-align: center;
+  color: #ffffff;
+} */
+
+/* .popup-image-plus-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.certificate-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.certificate-popup.active {
+  display: block;
+}
+
+.certificate-pic-open {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.certificate-pic-open.active {
+  display: block;
+}
